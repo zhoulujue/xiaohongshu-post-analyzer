@@ -38,7 +38,8 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
 
 SHORTLINK_RE = re.compile(r'xhslink\.cn')
-NOTE_ID_RE = re.compile(r'/discovery/item/([0-9a-f]+)')
+# note ids are 24-char hex; paths: /discovery/item/<id>  or  /explore/<id>
+NOTE_ID_RE = re.compile(r'/(?:discovery/item|explore)/([0-9a-f]{24})')
 TOKEN_RE = re.compile(r'[?&]xsec_token=([^&]+)')
 
 # ---------------------------------------------------------------- http helpers

@@ -29,31 +29,37 @@
 
 ```bash
 # 仅元数据（机器可读）
-python3 xhs_fetch.py "https://xhslink.cn/o/XXXX" --json
+python3 xhs_fetch.py "https://www.xiaohongshu.com/explore/6a7d9716000000002202ffaa?xsec_token=AB7ui8PQVSBncXnP2PiMo7Smjr_yytwX74PTu-0Hy-lsM=" --json
 
 # 人类可读摘要
-python3 xhs_fetch.py "https://xhslink.cn/o/XXXX"
+python3 xhs_fetch.py "https://www.xiaohongshu.com/explore/6a7d9716000000002202ffaa?xsec_token=AB7ui8PQVSBncXnP2PiMo7Smjr_yytwX74PTu-0Hy-lsM="
 
 # 下载视频 + 封面，并抽 3 帧
-python3 xhs_fetch.py "https://xhslink.cn/o/XXXX" --download --frames 3 --outdir ./out
+python3 xhs_fetch.py "https://www.xiaohongshu.com/explore/6a7d9716000000002202ffaa?xsec_token=AB7ui8PQVSBncXnP2PiMo7Smjr_yytwX74PTu-0Hy-lsM=" --download --frames 3 --outdir ./out
+```
+
+`xhslink.cn` 短链同样支持：
+
+```bash
+python3 xhs_fetch.py "https://xhslink.cn/o/XXXX" --json
 ```
 
 ### 输出示例
 
 ```json
 {
-  "note_id": "6a9d589c000000001001d2d8",
-  "title": "#正常穿搭 #浅跳一下",
-  "desc": "#正常穿搭 #浅跳一下",
+  "note_id": "6a7d9716000000002202ffaa",
+  "title": "宝宝，你像一匹小木马🎠",
+  "desc": "#聪明伶俐的小脑袋瓜 #可爱到模糊 #哈基米哈基米哈基米 #一辆小猫咪 #他好像知道自己很可爱 #这是我的哈基米哈基米",
   "type": "video",
-  "video_urls": ["https://sns-video-v6.xhscdn.com/stream/.../xxx_258.mp4?sign=...&t=..."],
+  "video_urls": ["https://sns-video-v6.xhscdn.com/stream/79/110/258/..._258.mp4?sign=...&t=..."],
   "image_urls": ["https://picasso-static.xiaohongshu.com/...png"]
 }
 ```
 
 使用 `--download` 后：
 ```
-out/note_6a9d589c000000001001d2d8/
+out/note_6a7d9716000000002202ffaa/
 ├── video.mp4
 ├── img_01.jpg
 └── frames/

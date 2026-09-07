@@ -13,7 +13,8 @@ metadata:
 # Xiaohongshu (小红书) Post Analyzer — no browser, no login
 
 Fetch and analyze Xiaohongshu (RED) posts from a share link, entirely over plain HTTP.
-Works with `xhslink.cn` short links **and** full `xiaohongshu.com/discovery/item/...` note URLs
+Works with `xhslink.cn` short links **and** full note URLs — both
+`xiaohongshu.com/discovery/item/...` and `xiaohongshu.com/explore/...` forms
 (share links carry the required `xsec_token`).
 
 **Why it works**: XHS embeds SSR content in the note page HTML for social-share previews
