@@ -10,6 +10,8 @@ Built and tested for **AI agents**: one command per link, JSON output, zero inte
 It was originally written inside a Hermes Agent session — the same session that verified it
 against a live video post end-to-end.
 
+- 🌐 [中文 README](./README.zh-CN.md)
+
 ## How it works (no tricks, no breaking)
 
 Xiaohongshu server-side-renders note pages and embeds `og:` meta tags +
